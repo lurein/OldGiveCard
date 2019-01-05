@@ -23,7 +23,6 @@
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
     "postinstall": "gulp default"
   },
   "author": "Lurein Perera",
