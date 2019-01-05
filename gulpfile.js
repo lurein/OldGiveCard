@@ -58,7 +58,7 @@ gulp.task('copy-plugins', function() {
     gulp.src([nodepath + 'particlesjs/dist/**/*']).pipe(gulp.dest('_site/assets/js/particlesjs/'));
     //Aos
     gulp.src([nodepath + 'aos/dist/**/*']).pipe(gulp.dest('_site/assets/js/aos/'));
-    
+
 });
 
 // Copy assets
@@ -158,8 +158,8 @@ gulp.task('compile-html:reset', function(done) {
 
 // Compile js from node modules
 gulp.task('compile-js', function() {
-    return gulp.src([ 
-        nodepath + 'jquery/dist/jquery.min.js', 
+    return gulp.src([
+        nodepath + 'jquery/dist/jquery.min.js',
         //nodepath + 'particlesjs/dist/particles.min.js',
         nodepath + 'feather-icons/dist/feather.min.js',
         nodepath + 'modal-video/js/modal-video.min.js',
@@ -186,6 +186,10 @@ gulp.task('copy-fonts', function() {
 gulp.task('copy-images', function() {
     gulp.src('images/**/*')
         .pipe(gulp.dest('./_site/assets/images/'));
+});
+
+gulp.task("heroku:production", function(){
+    console.log('hello'); // the task does not need to do anything.
 });
 
 gulp.task('init', ['setupBulma']);
