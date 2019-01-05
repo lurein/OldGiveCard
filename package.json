@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "postinstall": "gulp default"
+    "build": "gulp build"
   },
   "author": "Lurein Perera",
   "license": "MIT",
