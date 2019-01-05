@@ -188,9 +188,6 @@ gulp.task('copy-images', function() {
         .pipe(gulp.dest('./_site/assets/images/'));
 });
 
-gulp.task("heroku:production", function(){
-    console.log('hello'); // the task does not need to do anything.
-});
 
 gulp.task('init', ['setupBulma']);
 gulp.task('build', ['clean','copy', 'copy-plugins', 'compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
