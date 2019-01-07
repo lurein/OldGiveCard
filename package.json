@@ -22,7 +22,8 @@
     "node": ">=0.10.1"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Lurein Perera",
   "license": "MIT",
