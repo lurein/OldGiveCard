@@ -20,7 +20,7 @@ gulp.task('server', ['build'], function(){
 gulp.task('serveprod', function() {
   connect.server({
     root: './_site',
-    port: process.env.SERVER_PORT || 5000;
+    port: process.env.SERVER_PORT || 5000,
     livereload: false
   });
 });
