@@ -17,13 +17,13 @@ gulp.task('server', ['build'], function(){
     browser.init({server: './_site', port: port});
 });
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: './_site',
-    port: process.env.SERVER_PORT || 5000,
-    livereload: false
-  });
-});
+// gulp.task('serveprod', function() {
+//   connect.server({
+//     root: './_site',
+//     port: process.env.SERVER_PORT || 5000,
+//     livereload: false
+//   });
+// });
 
 // Watch files for changes
 gulp.task('watch', function() {
