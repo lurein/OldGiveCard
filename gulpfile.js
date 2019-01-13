@@ -9,21 +9,14 @@ var rimraf = require('rimraf').sync;
 var browser = require('browser-sync');
 var panini = require('panini');
 var concat = require('gulp-concat');
-var port = process.env.SERVER_PORT || 5000;
+var port = process.env.SERVER_PORT || 8080;
 var nodepath =  'node_modules/';
 
 // Starts a BrowerSync instance
-// gulp.task('server', ['build'], function(){
-//     browser.init({server: './_site', port: port});
-// });
-
-gulp.task('serveprod', [build], function() {
-  connect.server({
-    root: './_site',
-    port: port,
-    livereload: false
-  });
+gulp.task('server', ['build'], function(){
+    browser.init({server: './_site', port: port});
 });
+
 
 // Watch files for changes
 gulp.task('watch', function() {
@@ -199,4 +192,4 @@ gulp.task('copy-images', function() {
 
 gulp.task('init', ['setupBulma']);
 gulp.task('build', ['clean','copy', 'copy-plugins', 'compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
-gulp.task('default', ['serveprod', 'watch']);
+gulp.task('default', ['server', 'watch']);
