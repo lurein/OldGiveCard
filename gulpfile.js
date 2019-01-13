@@ -13,17 +13,17 @@ var port = process.env.SERVER_PORT || 8080;
 var nodepath =  'node_modules/';
 
 // Starts a BrowerSync instance
-gulp.task('server', ['build'], function(){
-    browser.init({server: './_site', port: port});
-});
-
-// gulp.task('serveprod', function() {
-//   connect.server({
-//     root: './_site',
-//     port: process.env.SERVER_PORT || 5000,
-//     livereload: false
-//   });
+// gulp.task('server', ['build'], function(){
+//     browser.init({server: './_site', port: port});
 // });
+
+gulp.task('serveprod', [build], function() {
+  connect.server({
+    root: './_site',
+    port: port,
+    livereload: false
+  });
+});
 
 // Watch files for changes
 gulp.task('watch', function() {
@@ -199,4 +199,4 @@ gulp.task('copy-images', function() {
 
 gulp.task('init', ['setupBulma']);
 gulp.task('build', ['clean','copy', 'copy-plugins', 'compile-js', 'copy-js', 'compile-sass', 'compile-scss', 'compile-html', 'copy-fonts', 'copy-images']);
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['serveprod', 'watch']);
