@@ -1,0 +1,6 @@
+{
+  "root": "_site/",
+  "routes": {
+    "/**": "index.html"
+  }
+}
