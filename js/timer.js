@@ -6,7 +6,7 @@ $(document).ready(function() {
  * GLOBAL VARS
  * -------------------------- */
     // The date you want to count down to
-    var targetDate = new Date("2019/02/01 00:00:00");   
+    var targetDate = new Date("2019/02/20 00:00:00");   
 
     // Other date related variables
     var days;
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $(function() {
         // Calculate time until launch date
         timeToLaunch();
-        // Transition the current countdown from 0 
+        // Transition the current countdown from 0
         numberTransition('#days .timer-number', days, 1000, 'easeOutQuad');
         numberTransition('#hours .timer-number', hrs, 1000, 'easeOutQuad');
         numberTransition('#minutes .timer-number', min, 1000, 'easeOutQuad');
@@ -30,7 +30,7 @@ $(document).ready(function() {
     });
 
     /* --------------------------
- * FIGURE OUT THE AMOUNT OF 
+ * FIGURE OUT THE AMOUNT OF
    TIME LEFT BEFORE LAUNCH
  * -------------------------- */
     function timeToLaunch(){
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
         // Find the difference between dates
         var diff = (currentDate - targetDate)/1000;
-        var diff = Math.abs(Math.floor(diff));  
+        var diff = Math.abs(Math.floor(diff));
 
         // Check number of days until target
         days = Math.floor(diff/(24*60*60));
@@ -55,10 +55,10 @@ $(document).ready(function() {
     }
 
     /* --------------------------
- * DISPLAY THE CURRENT 
+ * DISPLAY THE CURRENT
    COUNT TO LAUNCH
  * -------------------------- */
-    function countDownTimer(){ 
+    function countDownTimer(){
 
         // Figure out the time to launch
         timeToLaunch();
@@ -88,7 +88,7 @@ $(document).ready(function() {
             complete: function() {
                 $(id).text(this.numberCount);
             }
-        }); 
+        });
     };
 
 })
