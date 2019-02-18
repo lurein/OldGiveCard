@@ -1,5 +1,5 @@
 {
-  "name": "gcsite",
+  "name": "givecard",
   "version": "1.0.0",
   "description": "GiveCard Website",
   "main": "index.js",
@@ -33,5 +33,12 @@
     "panini": "^1.3.0",
     "popper.js": "^1.12.3",
     "rimraf": "^2.5.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Trying to add one team member"
   }
 }
