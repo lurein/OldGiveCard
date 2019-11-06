@@ -4,7 +4,7 @@
   "description": "GiveCard Website",
   "main": "index.js",
   "engines": {
-    "node": ">=0.10.1"
+    "node": "11.9.0"
   },
   "scripts": {
     "start": "gulp",
